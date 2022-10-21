@@ -3,11 +3,11 @@
   "version": "1.0.0",
   "description": "",
   "private": true,
-  "main": "index.js",
+  "main": "app.js",
   "scripts": {
-    "watch-sass": "sass ./initial-design/scss:./initial-design/css --watch",
-    "live-server": "live-server initial-design",
-    "dev-design": "npm-run-all --parallel watch-sass live-server"
+    "watch-sass": "sass ./initial-design/scss:./public/css --watch",
+    "compile-sass": "sass ./initial-design/scss:./public/css --style compressed --no-source-map",
+    "dev": "nodemon ./app.js"
   },
   "repository": {
     "type": "git",
@@ -31,5 +31,22 @@
     "npm-run-all": "^4.1.5",
     "prettier": "^2.7.1",
     "sass": "^1.55.0"
+  },
+  "dependencies": {
+    "compression": "^1.7.4",
+    "connect-flash": "^0.1.1",
+    "connect-mongo": "^4.6.0",
+    "cookie-parser": "^1.4.6",
+    "csurf": "^1.10.0",
+    "debug": "^4.3.4",
+    "dotenv": "^16.0.3",
+    "ejs": "^3.1.8",
+    "express": "^5.0.0-beta.1",
+    "express-ejs-layouts": "^2.5.1",
+    "express-session": "^1.17.3",
+    "helmet": "^6.0.0",
+    "http-errors": "^2.0.0",
+    "mongoose": "^6.6.7",
+    "morgan": "^1.10.0"
   }
 }

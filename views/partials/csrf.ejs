@@ -1,0 +1,3 @@
+<% if (_view.getCSRF) { %>
+  <input type="hidden" name="csrf-token" value="<%= _view.getCSRF() %>" />
+<% } %>

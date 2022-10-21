@@ -1,0 +1,10 @@
+<section class="section--server-error">
+  <div class="ctr">
+    <h2 class="msg">
+      <% if (serverError.status) { %> <span class="status"> <%= serverError.status %> </span> <% } %>
+      <% if (serverError.message) { %> <span class="msg"> <%= serverError.message %> </span> <% } %>
+    </h2>
+    <hr />
+    <pre class="stack"><%= serverError.stack %> </pre>
+  </div>
+</section>
