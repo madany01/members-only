@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Exclusive Clubhouse</title>
+
+    <link rel="stylesheet" href="./css/index.css" />
+    <link rel="shortcut icon" href="./imgs/favicon.svg" type="image/x-icon" />
+    <script src="./js/utils.js" defer></script>
+  </head>
+  <body>
+    <header class="main-header">
+      <div class="ctr">
+        <a href="/" class="logo">MembersOnly</a>
+
+        <nav>
+          <ul>
+            <li>
+              <a class="signup nav-link" href="/signup">signup</a>
+            </li>
+            <li>
+              <a class="login nav-link" href="/login">login</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section class="section--server-error">
+        <div class="ctr">
+          <h2 class="msg">
+            <span class="status">400</span>
+            <span class="msg">Not Found</span>
+          </h2>
+          <hr />
+          <pre class="stack">stack</pre>
+        </div>
+      </section>
+
+      <section class="section--flash-msgs">
+        <div class="ctr">
+          <ul class="flash-msgs">
+            <li class="flash-msg success">
+              <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. In, quibusdam!</span>
+              <button class="close-flash">✖</button>
+            </li>
+            <li class="flash-msg info">
+              <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. In, quibusdam!</span>
+              <button class="close-flash">✖</button>
+            </li>
+            <li class="flash-msg error">
+              <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. In, quibusdam!</span>
+              <button class="close-flash">✖</button>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="section--posts">
+        <div class="ctr">
+          <h2>
+            <span class="text">members posts</span>
+          </h2>
+
+          <ul class="posts">
+            <li>
+              <article class="post">
+                <p class="title">Lorem ipsum dolor sit amet.</p>
+
+                <div class="author-date">
+                  <p class="author">@robin</p>
+                  <p class="date">10 minutes ago</p>
+                </div>
+
+                <p class="content">
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deserunt quos maiores
+                  ducimus officia autem iusto animi explicabo mollitia odio vitae unde odit,
+                  corrupti possimus, rerum sed harum, modi blanditiis voluptatum?
+                </p>
+
+                <div class="actions">
+                  <a href="/posts/<id>/update" class="action-btn edit">
+                    <span class="material-symbols-outlined icon">edit</span>
+                  </a>
+                  <a href="/posts/<id>/delete" class="action-btn delete">
+                    <span class="material-symbols-outlined icon">delete</span>
+                  </a>
+                </div>
+              </article>
+            </li>
+            <li>
+              <article class="post">
+                <p class="title">Lorem ipsum dolor sit amet.</p>
+
+                <div class="author-date">
+                  <p class="author">@robin</p>
+                  <p class="date">10 minutes ago</p>
+                </div>
+
+                <p class="content">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur eum iusto
+                  nobis quod minima inventore facilis ipsam libero, incidunt, quisquam porro
+                  voluptatem veritatis error, aliquid in eius pariatur a asperiores?
+                </p>
+
+                <div class="actions">
+                  <a href="/posts/<id>/update" class="action-btn edit">
+                    <span class="material-symbols-outlined icon">edit</span>
+                  </a>
+                  <a href="/posts/<id>/delete" class="action-btn delete">
+                    <span class="material-symbols-outlined icon">delete</span>
+                  </a>
+                </div>
+              </article>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="section--signup">
+        <div class="ctr">
+          <h2 class="title">
+            <span class="icon">🔰</span>
+            <span class="text">Signup for an account</span>
+          </h2>
+
+          <form class="signup-form">
+            <div class="lbl-input-ctr">
+              <label for="signupFormFirstName">first name</label>
+              <input
+                type="text"
+                name="firstName"
+                id="signupFormFirstName"
+                placeholder="john"
+                required
+              />
+            </div>
+
+            <div class="lbl-input-ctr">
+              <label for="signupFormLastName">last name</label>
+              <input
+                type="text"
+                name="lastName"
+                id="signupFormLastName"
+                placeholder="doe"
+                required
+              />
+            </div>
+
+            <div class="lbl-input-ctr">
+              <label for="signupFormUsername">username</label>
+              <input type="text" name="username id="signupFormUsername" placeholder="jo"
+              autocomplete required />
+              <p class="description">
+                only lowercase latin letters, numbers, hyphen, and underscore are allowed. e.g.
+                &lt;user-123_abc&gt;
+              </p>
+              <ul class="errors">
+                <li class="error">this username is taken</li>
+              </ul>
+            </div>
+
+            <div class="lbl-input-ctr">
+              <label for="signupFormPassword1">password</label>
+              <input
+                type="password"
+                name="password"
+                id="signupFormPassword1"
+                minlength="8"
+                autocomplete
+                required
+              />
+              <p class="description">
+                password should contains at least 8 characters including lowercase letters,
+                uppercase letters, numbers and special characters like (*, +, $, ..)
+              </p>
+            </div>
+
+            <div class="lbl-input-ctr">
+              <label for="signupFormPassword2">password confirmation</label>
+              <input
+                type="password"
+                name="passwordConfirmation"
+                id="signupFormPassword2"
+                required
+              />
+            </div>
+
+            <div class="lbl-input-ctr lbl-input-inline">
+              <div class="inline">
+                <label for="signupFormIsAdmin">is admin</label>
+                <input type="checkbox" name="isAdmin" id="signupFormIsAdmin" />
+              </div>
+            </div>
+
+            <div class="action-ctr">
+              <hr />
+
+              <div class="actions">
+                <button class="btn btn-lg btn-primary" type="submit">Signup</button>
+                <p>
+                  already have an account &quest;
+                  <a class="login-link" href="/login">login</a>
+                </p>
+              </div>
+            </div>
+          </form>
+        </div>
+      </section>
+
+      <section class="section--login">
+        <div class="ctr">
+          <h2 class="title">
+            <span class="material-symbols-outlined icon">login</span>
+            <span class="text">Login</span>
+          </h2>
+
+          <form class="signup-form">
+            <div class="lbl-input-ctr">
+              <label for="loginFormUsername">username</label>
+              <input
+                type="text"
+                name="username"
+                id="loginFormUsername"
+                placeholder="john"
+                autocomplete
+                required
+              />
+            </div>
+
+            <div class="lbl-input-ctr">
+              <label for="loginFormPassword">password</label>
+              <input
+                type="password"
+                name="password"
+                id="loginFormPassword"
+                minlength="8"
+                autocomplete
+                required
+              />
+            </div>
+
+            <div class="actions">
+              <button class="btn btn-lg btn-primary" type="submit">Login</button>
+              <p>
+                don&apos;t have an account &quest;
+                <a class="login-link" href="/signup">signup</a>
+              </p>
+            </div>
+          </form>
+
+          <hr />
+        </div>
+      </section>
+
+      <section class="section--join">
+        <div class="ctr">
+          <h2 class="title">
+            <span class="material-symbols-outlined icon">join_inner</span>
+            <span class="text">Become Member</span>
+          </h2>
+
+          <form class="signup-form">
+            <div class="lbl-input-ctr">
+              <label for="clubJoinFormPassword">club password</label>
+              <input
+                type="password"
+                name="password"
+                id="clubJoinFormPassword"
+                minlength="8"
+                autocomplete
+                required
+              />
+            </div>
+
+            <div class="actions">
+              <button class="btn btn-lg btn-primary" type="submit">Join</button>
+            </div>
+          </form>
+
+          <hr />
+        </div>
+      </section>
+
+      <section class="section--post-form">
+        <div class="ctr">
+          <h2 class="title">
+            <span class="material-symbols-outlined icon">🔵</span>
+            <span class="text">Create Post</span>
+          </h2>
+
+          <form class="post-form">
+            <div class="lbl-input-ctr">
+              <label for="clubJoinFormPassword">title</label>
+              <input
+                type="text"
+                name="title"
+                id="postFormTitle"
+                placeholder="about something"
+                required
+              />
+            </div>
+
+            <div class="lbl-input-ctr">
+              <label for="clubJoinFormContent">content</label>
+              <textarea
+                type="text"
+                name="content"
+                id="postFormContent"
+                placeholder="your post content"
+                required
+              ></textarea>
+            </div>
+
+            <div class="actions">
+              <button class="btn btn-lg btn-primary" type="submit">Post</button>
+              <a class="btn btn-md btn-secondary" href="/">cancel</a>
+            </div>
+          </form>
+
+          <hr />
+        </div>
+      </section>
+
+      <section class="section--delete-confirmation">
+        <div class="ctr">
+          <h2 class="title">
+            <span class="material-symbols-outlined icon">🔴</span>
+            <span class="text">Delete Confirmation</span>
+          </h2>
+
+          <form class="post-form">
+            <p class="confirmation-msg-ctr">
+              <span>are you sure you want to delete</span>
+              <span class="item">post &quot; question to community &quot;</span>
+            </p>
+            <div class="actions">
+              <button class="btn btn-md btn-danger" type="submit">Yes, Delete</button>
+              <a class="btn btn-md btn-secondary" href="/">No, cancel</a>
+            </div>
+          </form>
+
+          <hr />
+        </div>
+      </section>
+    </main>
+  </body>
+</html>

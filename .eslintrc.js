@@ -1,0 +1,23 @@
+module.exports = {
+  env: {
+    es2021: true,
+    browser: true,
+  },
+  extends: ['eslint:recommended', 'airbnb-base', 'plugin:prettier/recommended'],
+  parserOptions: {
+    ecmaVersion: 'latest',
+  },
+  rules: {
+    'no-console': 'off',
+    'no-unused-vars': ['error', { argsIgnorePattern: 'next' }],
+    'no-underscore-dangle': ['off'],
+    'no-return-assign': ['error', 'except-parens'],
+    'no-use-before-define': ['error', { functions: false }],
+    'consistent-return': 'off',
+    'no-shadow': 'off',
+    camelcase: 'off',
+    'no-multi-assign': ['error', { ignoreNonDeclaration: true }],
+    strict: 'off',
+    'lines-between-class-members': 'off',
+  },
+}

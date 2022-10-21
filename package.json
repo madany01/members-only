@@ -1,0 +1,35 @@
+{
+  "name": "members-only",
+  "version": "1.0.0",
+  "description": "",
+  "private": true,
+  "main": "index.js",
+  "scripts": {
+    "watch-sass": "sass ./initial-design/scss:./initial-design/css --watch",
+    "live-server": "live-server initial-design",
+    "dev-design": "npm-run-all --parallel watch-sass live-server"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/madany01/members-only.git"
+  },
+  "keywords": [],
+  "author": "Ahmad Madany",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/madany01/members-only/issues"
+  },
+  "homepage": "https://github.com/madany01/members-only#readme",
+  "devDependencies": {
+    "eslint": "^8.26.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-import": "^2.26.0",
+    "eslint-plugin-prettier": "^4.2.1",
+    "live-server": "^1.2.2",
+    "nodemon": "^2.0.20",
+    "npm-run-all": "^4.1.5",
+    "prettier": "^2.7.1",
+    "sass": "^1.55.0"
+  }
+}
