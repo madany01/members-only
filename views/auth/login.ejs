@@ -1,0 +1,50 @@
+<section class="section--login">
+  <div class="ctr">
+    <h2 class="title">
+      <span class="material-symbols-outlined icon">login</span>
+      <span class="text">Login</span>
+    </h2>
+
+    <form class="signup-form" method="POST">
+      <%- include('../partials/csrf') %>
+      <div class="lbl-input-ctr">
+        <label for="loginFormUsername">username</label>
+        <input
+          type="text"
+          name="username"
+          id="loginFormUsername"
+          placeholder="john"
+          autocomplete="username"
+          class="<%= locals.errors?.username ? 'invalid' : '' %>"
+          value="<%= locals.fields?.username %>"
+          required
+        />
+        <%- include('../partials/field-error', {fieldName: 'username'}) %>
+      </div>
+
+      <div class="lbl-input-ctr">
+        <label for="loginFormPassword">password</label>
+        <input
+          type="password"
+          name="password"
+          id="loginFormPassword"
+          autocomplete="current-password"
+          value="<%= locals.fields?.password %>"
+          class="<%= locals.errors?.password ? 'invalid' : '' %>"
+          required
+        />
+        <%- include('../partials/field-error', {fieldName: 'password'}) %>
+      </div>
+
+      <div class="actions">
+        <button class="btn btn-lg btn-primary" type="submit">Login</button>
+        <p>
+          don&apos;t have an account &quest;
+          <a class="login-link" href="/signup">signup</a>
+        </p>
+      </div>
+    </form>
+
+    <hr />
+  </div>
+</section>

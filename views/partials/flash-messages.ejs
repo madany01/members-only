@@ -2,14 +2,13 @@
 <section class="section--flash-msgs">
   <div class="ctr">
     <ul class="flash-msgs">
-      <% Object.entries(_view.getMessages()).forEach(([type, msgs]) => { %>
-        <% msgs.forEach(msg => { %>
-          <li class="flash-msg success">
-            <span><%= msg %> </span>
-            <button class="close-flash">✖</button>
-          </li>
-        <% }) %>
-      <% }) %>
+      <% Object.entries(_view.getMessages()).forEach(([type, msgs]) => { %> <% msgs.forEach(msg =>
+      { %>
+      <li class="flash-msg <%= type %>">
+        <span><%= msg %></span>
+        <button class="close-flash">✖</button>
+      </li>
+      <% }) %> <% }) %>
     </ul>
   </div>
 </section>

@@ -9,7 +9,7 @@ const PORT = process.env.PORT || 3000
 const { CLUB_PASSWORD } = process.env
 
 const { MONGODB_URL = 'mongodb://localhost:27017/members_only' } = process.env
-const MONGODB_OPTS = { useUnifiedTopology: true, useNewUrlParser: true }
+const MONGODB_OPTS = { useUnifiedTopology: true, useNewUrlParser: true } // TODO auto index
 
 const { COOKIE_SIGN_KEY } = process.env
 

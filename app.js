@@ -18,6 +18,8 @@ const flash = require('connect-flash')
 const mongoose = require('mongoose')
 const MongoStore = require('connect-mongo')
 
+const passport = require('passport')
+
 const routes = require('./routes')
 const { csrfProtect, sessionPopper } = require('./core')
 
@@ -138,6 +140,13 @@ app.use((req, res, next) => {
 
 app.use(flash())
 
+// *** passport session link
+
+app.use(passport.authenticate('session')) // same as app.use(passport.session())
+app.use((req, res, next) => {
+  res.locals._view.user = req.user
+  next()
+})
 // *** all routes
 
 routes.forEach(route => app.use(...route))

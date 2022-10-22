@@ -1,0 +1,31 @@
+<section class="section--join">
+  <div class="ctr">
+    <h2 class="title">
+      <span class="material-symbols-outlined icon">join_inner</span>
+      <span class="text">Become Member</span>
+    </h2>
+
+    <form class="signup-form" method="POST">
+      <%- include('../partials/csrf') %>
+      <div class="lbl-input-ctr">
+        <label for="clubJoinFormPassword">club password</label>
+        <input
+          type="password"
+          name="password"
+          id="clubJoinFormPassword"
+          autocomplete="current-password"
+          value="<%= locals.fields?.password %>"
+          class="<%= locals.errors?.password ? 'invalid' : '' %>"
+          required
+        />
+        <%- include('../partials/field-error', {fieldName: 'password'}) %>
+      </div>
+
+      <div class="actions">
+        <button class="btn btn-lg btn-primary" type="submit">Join</button>
+      </div>
+    </form>
+
+    <hr />
+  </div>
+</section>

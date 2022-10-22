@@ -2,15 +2,30 @@
   <div class="ctr">
     <a href="/" class="logo">MembersOnly</a>
 
-    <nav>
-      <ul>
-        <li>
-          <a class="signup nav-link" href="/signup">signup</a>
-        </li>
-        <li>
-          <a class="login nav-link" href="/login">login</a>
-        </li>
-      </ul>
-    </nav>
+    <div class="side">
+      <nav>
+        <ul>
+          <% if (!_view.user) { %>
+            <li>
+              <a class="signup nav-link" href="/signup">signup</a>
+            </li>
+            <li>
+              <a class="login nav-link" href="/login">login</a>
+            </li>
+          <% } else if(!_view.user.isMember && !_view.user.isAdmin) { %>
+            <li>
+              <a class="join-club nav-link" href="/become-member">join club</a>
+            </li>
+          <% } %>
+        </ul>
+      </nav>
+
+      <% if (_view.user) { %>
+        <form action="/logout" method="POST">
+          <%- include('./csrf') %>
+          <button type="submit" class="logout btn btn-sm btn-danger">logout</button>
+        </form>
+      <% } %>
+    </div>
   </div>
 </header>

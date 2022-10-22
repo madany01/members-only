@@ -1,11 +1,9 @@
 <% if (locals.errors?.[fieldName]?.length) { %>
-  <ul class="errors">
-    <% if (Array.isArray(errors[fieldName])) { %>
-      <% errors[fieldName].forEach(msg => { %>
-          <li class="error"><%= msg %></li>
-      <% }) %>
-    <% } else { %>
-      <li class="error"><%= errors[fieldName] %></li>
-    <% } %>
-  </ul>
+<ul class="errors">
+  <% if (Array.isArray(errors[fieldName])) { %> <% errors[fieldName].forEach(err => { %>
+  <li class="error"><%= err.msg || err.message || err %></li>
+  <% }) %> <% } else { %>
+  <li class="error"><%= errors[fieldName] %></li>
+  <% } %>
+</ul>
 <% } %>

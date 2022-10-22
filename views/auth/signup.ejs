@@ -1,0 +1,116 @@
+<section class="section--signup">
+  <div class="ctr">
+    <h2 class="title">
+      <span class="icon">🔰</span>
+      <span class="text">Signup for an account</span>
+    </h2>
+
+    <form class="signup-form" method="POST">
+      <%- include('../partials/csrf') %>
+      <div class="lbl-input-ctr">
+        <label for="signupFormFirstName">first name</label>
+        <input
+          type="text"
+          name="firstName"
+          id="signupFormFirstName"
+          placeholder="john"
+          maxlength="128"
+          value="<%= locals.fields?.firstName %>"
+          class="<%= locals.errors?.firstName ? 'invalid' : '' %>"
+          required
+        />
+        <%- include('../partials/field-error', {fieldName: 'firstName'}) %>
+      </div>
+
+      <div class="lbl-input-ctr">
+        <label for="signupFormLastName">last name</label>
+        <input
+          type="text"
+          name="lastName"
+          id="signupFormLastName"
+          placeholder="doe"
+          required
+          maxlength="128"
+          class="<%= locals.errors?.lastName ? 'invalid' : '' %>"
+          value="<%= locals.fields?.lastName %>"
+        />
+        <%- include('../partials/field-error', {fieldName: 'lastName'}) %>
+      </div>
+
+      <div class="lbl-input-ctr">
+        <label for="signupFormUsername">username</label>
+        <input
+          type="text"
+          name="username"
+          id="signupFormUsername"
+          placeholder="jo"
+          pattern="(^[a-z][a-z0-9_-]*$)"
+          maxlength="64"
+          title="examples: abc12, user_x, abc-def"
+          required
+          class="<%= locals.errors?.username ? 'invalid' : '' %>"
+          value="<%= locals.fields?.username %>"
+        />
+        <p class="description">
+          username can only include letters (from a to z), numbers, hyphens, and underscores. and
+          must begin with a letter. e.g. `abc-123_def`
+        </p>
+        <%- include('../partials/field-error', {fieldName: 'username'}) %>
+      </div>
+
+      <div class="lbl-input-ctr">
+        <label for="signupFormPassword1">password</label>
+        <input
+          type="password"
+          name="password"
+          id="signupFormPassword1"
+          maxlength="256"
+          class="<%= locals.errors?.password ? 'invalid' : '' %>"
+          value="<%= locals.fields?.password %>"
+          required
+        />
+        <%- include('../partials/field-error', {fieldName: 'password'}) %>
+      </div>
+
+      <div class="lbl-input-ctr">
+        <label for="signupFormPassword2">password confirmation</label>
+        <input
+          type="password"
+          name="passwordConfirmation"
+          id="signupFormPassword2"
+          maxlength="256"
+          class="<%= locals.errors?.passwordConfirmation ? 'invalid' : '' %>"
+          value="<%= locals.fields?.passwordConfirmation %>"
+          required
+        />
+        <%- include('../partials/field-error', {fieldName: 'passwordConfirmation'}) %>
+      </div>
+
+      <div class="lbl-input-ctr lbl-input-inline">
+        <div class="inline">
+          <label for="signupFormIsAdmin">is admin</label>
+          <input
+          type="checkbox"
+          name="isAdmin"
+          id="signupFormIsAdmin"
+          class=" <%= locals.errors?.isAdmin ? 'invalid' : '' %> "
+          <%= locals.fields?.isAdmin ? 'checked' : '' %> />
+          <%- include('../partials/field-error', {fieldName: 'isAdmin'}) %>
+          <!--  -->
+        </div>
+      </div>
+
+      <div class="action-ctr">
+        <hr />
+
+        <div class="actions">
+          <button class="btn btn-lg btn-primary" type="submit">Signup</button>
+          <p>
+            already have an account &quest;
+            <a class="login-link" href="/login">login</a>
+          </p>
+        </div>
+      </div>
+    </form>
+  </div>
+</section>

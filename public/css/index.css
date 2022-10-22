@@ -140,32 +140,48 @@ select {
   font-size: 1.6rem;
   background-color: #0f1414;
   color: #e4f1f0;
-  transition: all 0.3s, outline 0ms, width 0ms, height 0ms;
 }
 input.invalid,
 textarea.invalid,
 select.invalid {
   border-color: #f44336;
 }
-input:focus,
-textarea:focus,
-select:focus {
+input:not([type=checkbox]):not([type=radio]),
+textarea:not([type=checkbox]):not([type=radio]),
+select:not([type=checkbox]):not([type=radio]) {
+  transition: all 0.3s, outline 0ms, width 0ms, height 0ms;
+}
+input:not([type=checkbox]):not([type=radio]):focus,
+textarea:not([type=checkbox]):not([type=radio]):focus,
+select:not([type=checkbox]):not([type=radio]):focus {
   border-color: #ffc83d;
   outline-width: 0;
   outline-color: transparent;
+}
+input[type=checkbox], input[type=radio],
+textarea[type=checkbox],
+textarea[type=radio],
+select[type=checkbox],
+select[type=radio] {
+  width: 2rem;
+  height: 2rem;
+  accent-color: #ffc83d;
+  transition: all 0.3s, outline-offset 0ms, outline-width 0ms, outline-style 0ms, width 0ms, height 0ms;
+  outline-offset: -0.1rem;
+  outline: 0.2rem solid transparent;
+}
+input[type=checkbox]:focus-visible, input[type=radio]:focus-visible,
+textarea[type=checkbox]:focus-visible,
+textarea[type=radio]:focus-visible,
+select[type=checkbox]:focus-visible,
+select[type=radio]:focus-visible {
+  outline-color: #ffc83d;
 }
 input::placeholder,
 textarea::placeholder,
 select::placeholder {
   color: #48504f;
   font-size: 1.4rem;
-}
-
-input[type=checkbox],
-input[type=radio] {
-  width: 2rem;
-  height: 2rem;
-  accent-color: #ffc83d;
 }
 
 textarea {
@@ -270,19 +286,24 @@ body > main {
   font-style: italic;
   color: #738e9a;
 }
-.main-header .ctr nav ul {
+.main-header .ctr .side {
   display: flex;
   gap: 1.6rem;
   align-items: center;
 }
-.main-header .ctr nav ul .nav-link {
+.main-header .ctr .side nav ul {
+  display: flex;
+  gap: 1.6rem;
+  align-items: center;
+}
+.main-header .ctr .side nav ul .nav-link {
   font-size: 1.8rem;
   color: #109c9c;
   padding: 0.4rem 0;
   border-bottom: 0.1rem solid transparent;
   transition: all 0.3s;
 }
-.main-header .ctr nav ul .nav-link:hover {
+.main-header .ctr .side nav ul .nav-link:hover {
   border-color: currentColor;
 }
 

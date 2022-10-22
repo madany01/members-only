@@ -5,8 +5,8 @@
   "private": true,
   "main": "app.js",
   "scripts": {
-    "watch-sass": "sass ./initial-design/scss:./public/css --watch",
-    "compile-sass": "sass ./initial-design/scss:./public/css --style compressed --no-source-map",
+    "watch-sass": "sass ./public-src/scss:./public/css --watch",
+    "compile-sass": "sass ./public-src/scss:./public/css --style compressed --no-source-map",
     "dev": "nodemon ./app.js"
   },
   "repository": {
@@ -33,6 +33,7 @@
     "sass": "^1.55.0"
   },
   "dependencies": {
+    "bcryptjs": "^2.4.3",
     "compression": "^1.7.4",
     "connect-flash": "^0.1.1",
     "connect-mongo": "^4.6.0",
@@ -44,9 +45,12 @@
     "express": "^5.0.0-beta.1",
     "express-ejs-layouts": "^2.5.1",
     "express-session": "^1.17.3",
+    "express-validator": "^6.14.2",
     "helmet": "^6.0.0",
     "http-errors": "^2.0.0",
     "mongoose": "^6.6.7",
-    "morgan": "^1.10.0"
+    "morgan": "^1.10.0",
+    "passport": "^0.6.0",
+    "passport-local": "^1.0.0"
   }
 }
