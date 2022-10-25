@@ -1,0 +1,73 @@
+{
+  "users": [
+    {
+      "firstName": "ahmad",
+      "lastName": "ahmad",
+      "username": "ahmad",
+      "password": "ahmad.secret123",
+      "isAdmin": true
+    },
+    {
+      "firstName": "robin",
+      "lastName": "robin",
+      "username": "robin",
+      "password": "robin.secret123",
+      "isMember": true
+    },
+    {
+      "firstName": "alex",
+      "lastName": "alex",
+      "username": "alex",
+      "password": "alex.secret123"
+    },
+    {
+      "firstName": "alice",
+      "lastName": "alice",
+      "username": "alice",
+      "password": "alice.secret123"
+    },
+    {
+      "firstName": "amy",
+      "lastName": "amy",
+      "username": "amy",
+      "password": "amy.secret123"
+    }
+  ],
+  "posts": [
+    {
+      "user": "robin",
+      "title": "Nesciunt animi ut minima rem, voluptate odit aliquid molestiae adipisci?",
+      "content": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quod molestiae aspernatur error animi harum labore dolore illum cum aliquam dolor dignissimos placeat aut fuga temporibus libero exercitationem, explicabo iusto quos?"
+    },
+    {
+      "user": "robin",
+      "title": "uo cumque libero facilis expedita accusamus",
+      "content": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque eum quo illo cum maxime omnis commodi dolorum? Delectus enim nihil quae perspiciatis itaque et ipsam. Quia labore dolorem mollitia perferendis."
+    },
+    {
+      "user": "alice",
+      "title": "Nesciunt saepe fugiat molestias natus quas repellat",
+      "content": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem sapiente recusandae, laudantium hic sit accusamus ut rerum quia laboriosam dolores culpa, optio ad, nihil ullam maxime eveniet minus incidunt iure?"
+    },
+    {
+      "user": "alex",
+      "title": "Minima ipsa molestias autem provident",
+      "content": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Cupiditate laboriosam, impedit deleniti culpa numquam, aliquid officia suscipit, laborum ea recusandae fugiat corrupti provident aperiam? Adipisci ab numquam officiis exercitationem quod."
+    },
+    {
+      "user": "robin",
+      "title": "sit amet consectetur adipisicing elit",
+      "content": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nisi cumque consequuntur laborum ullam quasi dolores quam ducimus a quod sit quaerat corrupti dolorum, dolore debitis tempora deleniti suscipit explicabo veniam?"
+    },
+    {
+      "user": "amy",
+      "title": "In obcaecati iste quaerat vel qui ipsam. Reiciendis ex accusamus dolores?",
+      "content": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Error iure soluta, similique minus est, facilis suscipit tempore vitae animi accusamus assumenda impedit sed fuga libero odit. Obcaecati consequuntur quas voluptatibus?"
+    },
+    {
+      "user": "ahmad",
+      "title": "olor sit amet consectetur adipisicing elit",
+      "content": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic obcaecati similique eveniet ducimus a asperiores eius deserunt accusamus minima, omnis alias, commodi est. Porro, ipsa quia saepe dicta est veritatis."
+    }
+  ]
+}
