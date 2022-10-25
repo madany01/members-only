@@ -44,6 +44,7 @@ img {
 }
 
 html {
+  scroll-behavior: smooth;
   box-sizing: border-box;
   font-size: 62.5%;
 }
@@ -280,6 +281,16 @@ body > main {
   align-items: center;
   justify-content: space-between;
 }
+@media (max-width: 30.625rem) {
+  .main-header .ctr {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 3.2rem;
+  }
+  .main-header .ctr .side {
+    align-self: flex-end;
+  }
+}
 .main-header .ctr .logo {
   font-size: 2.4rem;
   font-weight: 300;
@@ -360,6 +371,7 @@ body > main {
 .section--delete-confirmation .ctr form .actions {
   display: flex;
   gap: 1.2rem;
+  flex-wrap: wrap;
   align-items: center;
 }
 .section--signup .ctr form .actions p,
@@ -391,8 +403,12 @@ body > main {
 .section--posts .ctr {
   max-width: 90rem;
 }
+.section--posts .ctr .create-post {
+  margin-bottom: 4.4rem;
+}
 .section--posts .ctr h2 {
   font-size: 1.2rem;
+  color: #e4f1f0;
   display: flex;
   align-items: center;
   gap: 1.6rem;
@@ -412,6 +428,7 @@ body > main {
 }
 .section--posts .ctr ul .post {
   padding: 2.4rem;
+  overflow: hidden;
   display: flex;
   flex-direction: column;
   padding-bottom: 1.2rem;
@@ -423,13 +440,15 @@ body > main {
 .section--posts .ctr ul .post .title {
   margin-bottom: 0.6rem;
   font-size: 1.8rem;
+  color: #e4f1f0;
   font-weight: 500;
 }
 .section--posts .ctr ul .post .author-date {
   display: flex;
   align-items: center;
-  gap: 1.6rem;
-  margin-bottom: 3.6rem;
+  flex-wrap: wrap;
+  gap: 0.8rem;
+  margin-bottom: 4.2rem;
 }
 .section--posts .ctr ul .post .author {
   font-size: 1.4rem;

@@ -1,3 +1,4 @@
 const userValidator = require('./user')
+const postValidator = require('./post')
 
-module.exports = { userValidator }
+module.exports = { userValidator, postValidator }

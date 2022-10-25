@@ -1,0 +1,22 @@
+<section class="section--delete-confirmation">
+  <div class="ctr">
+    <h2 class="title">
+      <span class="material-symbols-outlined icon">🔴</span>
+      <span class="text">Delete Confirmation</span>
+    </h2>
+
+    <form class="post-form" method="POST">
+      <%- include('../partials/csrf') %>
+      <p class="confirmation-msg-ctr">
+        <span>are you sure you want to delete the post: </span>
+        <span class="item">&quot;<%= post.title %>&quot;</span>
+      </p>
+      <div class="actions">
+        <button class="btn btn-md btn-danger" type="submit">Yes, Delete</button>
+        <a class="btn btn-md btn-secondary" href="/">No, cancel</a>
+      </div>
+    </form>
+
+    <hr />
+  </div>
+</section>

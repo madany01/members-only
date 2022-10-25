@@ -1,0 +1,22 @@
+.empty-list {
+  font-size: 1.6rem;
+  font-weight: 500;
+  color: $color-blue;
+}
+
+.ctr {
+  width: min(100% - 2 * 3.2rem, 111rem);
+  margin: 0 auto;
+}
+
+section {
+  margin-bottom: 8rem;
+
+  h2 {
+    font-size: 2.4rem;
+    font-weight: 500;
+    color: $color-white;
+
+    margin-bottom: 3.2rem;
+  }
+}

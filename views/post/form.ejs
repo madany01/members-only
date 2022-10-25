@@ -1,0 +1,48 @@
+<section class="section--post-form">
+  <div class="ctr">
+    <h2 class="title">
+      <span class="material-symbols-outlined icon">🔵</span>
+      <span class="text">Create Post</span>
+    </h2>
+
+
+    <form class="post-form" method="POST">
+      <%- include('../partials/csrf') %>
+      <div class="lbl-input-ctr">
+        <label for="clubJoinFormPassword">title</label>
+        <input
+          type="text"
+          name="title"
+          id="postFormTitle"
+          maxlength="256"
+          placeholder="about something"
+          value="<%= locals.fields?.title %>"
+          class="<%= locals.errors?.title ? 'invalid' : '' %>"
+          required
+        />
+        <%- include('../partials/field-error', {fieldName: 'title'}) %>
+      </div>
+
+      <div class="lbl-input-ctr">
+        <label for="clubJoinFormContent">content</label>
+        <textarea
+          type="text"
+          name="content"
+          id="postFormContent"
+          maxlength="1024"
+          placeholder="your post content"
+          required
+          class="<%= locals.errors?.content ? 'invalid' : '' %>"
+          ><%= locals.fields?.title %></textarea>
+          <%- include('../partials/field-error', {fieldName: 'content'}) %>
+      </div>
+
+      <div class="actions">
+        <button class="btn btn-lg btn-primary" type="submit">Post</button>
+        <a class="btn btn-md btn-secondary" href="/">cancel</a>
+      </div>
+    </form>
+
+    <hr />
+  </div>
+</section>

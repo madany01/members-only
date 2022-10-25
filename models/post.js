@@ -11,12 +11,12 @@ const postSchema = new Schema({
   title: {
     type: String,
     required: true,
-    maxLength: 64,
+    maxLength: 256,
   },
   content: {
     type: String,
     required: true,
-    maxLength: 512,
+    maxLength: 1024,
   },
   createdAt: { type: Date, default: () => new Date() },
 })
