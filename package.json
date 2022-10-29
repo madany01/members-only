@@ -7,7 +7,8 @@
   "scripts": {
     "watch-sass": "sass ./public-src/scss:./public/css --watch",
     "compile-sass": "sass ./public-src/scss:./public/css --style compressed --no-source-map",
-    "dev": "nodemon ./app.js"
+    "dev": "nodemon ./app.js",
+    "start": "node ./app.js"
   },
   "repository": {
     "type": "git",
