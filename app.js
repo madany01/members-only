@@ -37,6 +37,8 @@ app.use(morgan('dev'))
 // *** production security
 
 if (conf.PRODUCTION_ENV) {
+  app.set('trust proxy', 1)
+
   app.use(helmet())
   app.use(compression())
 }
@@ -59,11 +61,12 @@ app.use(
       mongoOptions: conf.MONGODB_OPTS,
       collectionName: conf.SESSION_DB_NAME,
     }),
+    ...(conf.PRODUCTION_ENV && { proxy: true }),
     cookie: {
       maxAge: conf.SESSION_COOKIE_MAX_AGE,
       sameSite: conf.SESSION_COOKIE_SAME_SITE,
       signed: conf.PRODUCTION_ENV,
-      secure: conf.PRODUCTION_ENV,
+      secure: conf.PRODUCTION_ENV && !conf.ON_RENDER_HOSTING,
       httpOnly: conf.PRODUCTION_ENV,
     },
   })

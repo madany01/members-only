@@ -11,6 +11,8 @@ const { CLUB_PASSWORD } = process.env
 const { MONGODB_URL = 'mongodb://localhost:27017/members_only' } = process.env
 const MONGODB_OPTS = { useUnifiedTopology: true, useNewUrlParser: true }
 
+const ON_RENDER_HOSTING = process.env.ON_RENDER_HOSTING || false
+
 const { COOKIE_SIGN_KEY } = process.env
 
 const SESSION_DB_NAME = 'sessions'
@@ -39,6 +41,8 @@ module.exports = {
   MONGODB_OPTS,
 
   CLUB_PASSWORD,
+
+  ON_RENDER_HOSTING,
 
   COOKIE_SIGN_KEY,
 
