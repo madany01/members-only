@@ -16,8 +16,6 @@
 
               <div class="author-date">
                 <p class="author">
-                  <% console.log( post.user.id.toString()) %>
-                  <% console.log( user?.id.toString()) %>
                   <% if (adminOrMember || post.user.id.toString() === user?.id.toString()) { %>
                     @<%= post.user.username %>
                   <% } else { %>

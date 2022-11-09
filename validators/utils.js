@@ -22,7 +22,6 @@ function summarize(fieldsNames) {
     )
 
     req.ctx.fields = { valid, errors: fieldsErrors, values: fieldsValues }
-    console.log(req.ctx.fields)
     next()
   }
 }
